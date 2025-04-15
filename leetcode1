@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+    int n,i,j,tar,p,q;
+    scanf("%d",&n) ;
+    int a[n];
+    for(i=0; i<n; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("Enter target:");
+    scanf("%d",&tar) ;
+
+    for(i=0; i<n; i++)
+    {
+        for(j=i+1; j<n; j++)
+        {
+            if(a[i]+a[j]==tar)
+            {
+                p=i;
+                q=j;
+                break;
+            }
+        }
+    }
+    printf("a[%d]+a[%d]",p,q);
+    return 0;
+}
